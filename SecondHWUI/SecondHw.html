@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app" class="container">
+        <!--標頭-->
+        <h3 class="d-flex justify-content-center">
+            Sensor Website
+        </h3>
+        <h5 class="d-flex justify-content-center">
+            Title
+        </h5>
+        
+        <!--設置按鈕-->
+        <nav class="navbar navbar-expand-sm bg-light navber-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item m-1">
+                    <router-link class="btn btn-light btn-outline-primary"
+                    to="/Home">Home</router-link>
+                </li>
+                <li class="nav-item m-1">
+                    <router-link class="btn btn-light btn-outline-primary"
+                    to="/Sensor">Sensor</router-link>
+                </li>
+            </ul>
+        </nav>
+
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <!--vue連結-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+
+    <!--匯入檔案-->
+    <!--這裡有先後順序，必須先script Home跟Sensor才能script app，不然app會找不到Home跟Sensor-->
+    <script src="Variables.js"></script>
+    <script src="Home.js"></script>
+    <script src="Sensor.js"></script>
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

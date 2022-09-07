@@ -1,0 +1,1 @@
+const Home = { template: '<div>This is Home Page.</div>' }
